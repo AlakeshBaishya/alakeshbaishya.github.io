@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1a1a1a; --body:#2b2b2b; --muted:#6a6a6a; --line:#e6e6e6;
+    --link:#1155cc;            /* the only accent color */
+    --link-hover:#0a3a99;
+    --sans:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+    --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#fff;color:var(--body);font-family:var(--sans);
+    font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:var(--link);text-decoration:none}
+  a:hover{color:var(--link-hover);text-decoration:underline}
+  .wrap{max-width:720px;margin:0 auto;padding:64px 24px}
+
+  header{display:flex;gap:24px;align-items:center;margin-bottom:24px}
+  .photo{width:116px;height:116px;border-radius:6px;object-fit:cover;flex-shrink:0;
+    border:1px solid var(--line);background:#f3f3f3}
+  h1{font-size:28px;font-weight:600;color:var(--ink);letter-spacing:-.3px;margin:0 0 4px}
+  .role{font-size:15.5px;color:var(--ink);margin:0 0 1px}
+  .affil{font-size:14.5px;color:var(--muted);margin:0}
+
+  .bio{font-size:16px;margin:0 0 16px}
+
+  /* links — simple inline row */
+  .links{font-size:15px;margin:0 0 44px;color:var(--muted)}
+  .links a{font-weight:500}
+  .links .sep{margin:0 8px;color:#cfcfcf}
+
+  h2{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--ink);margin:0 0 16px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+  section{margin-bottom:42px;scroll-margin-top:24px}
+
+  .topic{margin-bottom:20px}
+  .topic h3{font-size:17px;font-weight:600;color:var(--ink);margin:0 0 5px}
+  .topic p{font-size:15.5px;margin:0 0 6px}
+  .meta{font-size:14px}
+  .meta a{font-weight:500}.meta .sep{margin:0 7px;color:#cfcfcf}
+
+  .pub{margin-bottom:18px}
+  .pub .t{font-size:16px;font-weight:600;color:var(--ink)}
+  .pub .au{font-size:15px;color:var(--muted);margin:1px 0 4px}
+  .pub .au b{color:var(--ink);font-weight:600}
+
+  .repo{margin-bottom:12px}
+  .repo .n{font-size:15.5px;font-weight:600}
+  .repo .d{font-size:15px;color:var(--muted)}
+
+  pre{background:#f7f7f7;border:1px solid var(--line);color:#222;font-family:var(--mono);
+    font-size:13px;line-height:1.6;border-radius:6px;padding:16px 18px;overflow:auto;margin:16px 0 0}
+  pre .c{color:#8a8a8a}
+
+  footer{font-size:13px;color:var(--muted);margin-top:8px}
+  @media(max-width:560px){header{flex-direction:column;text-align:center}.wrap{padding:44px 22px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- PHOTO: save your headshot beside this file as "photo.jpg" -->
+  <header>
+    <img class="photo" src="photo.jpg" alt="Your Name">
+    <div>
+      <h1>Your Name</h1>
+      <p class="role">PhD candidate, Machine Learning</p>
+      <p class="affil">University &middot; Research Lab</p>
+    </div>
+  </header>
+
+  <p class="bio">I am a PhD candidate working on methods that stay reliable when the data shifts under them — closing the gap between what works in a paper and what survives in deployment. My interests include robustness, efficient inference, and the theory behind both.</p>
+
+  <!-- YOUR LINKS — edit each href below. Change only the text in quotes.
+       To remove one, delete that <a> and the <span class="sep"> before it. -->
+  <p class="links">
+    <a href="mailto:you@email.edu">Email</a><span class="sep">/</span><!-- EMAIL -->
+    <a href="cv.pdf">CV</a><span class="sep">/</span><!-- CV (PDF) -->
+    <a href="https://scholar.google.com/citations?user=YOURID">Google Scholar</a><span class="sep">/</span><!-- SCHOLAR -->
+    <a href="https://github.com/YOURHANDLE">GitHub</a><span class="sep">/</span><!-- GITHUB -->
+    <a href="https://arxiv.org/a/YOURNAME">arXiv</a><!-- ARXIV -->
+  </p>
+
+  <section id="research">
+    <h2>Research</h2>
+    <!-- One .topic per theme: what it is + why it matters, then links. -->
+    <div class="topic">
+      <h3>Robustness under distribution shift</h3>
+      <p>When a model trained on one distribution meets another at test time, accuracy can collapse silently. I study why this happens and design training objectives that degrade gracefully instead — useful anywhere a model outlives the data it was trained on.</p>
+      <p class="meta"><a href="https://arxiv.org/abs/0000.00000">arXiv</a><span class="sep">/</span><a href="#">PDF</a><span class="sep">/</span>NeurIPS 2025</p>
+    </div>
+    <div class="topic">
+      <h3>Efficient inference for large models</h3>
+      <p>Big models are slow and expensive to serve. I study how far you can prune, quantize, or restructure them before quality breaks — and what that reveals about which parameters actually carry the work.</p>
+      <p class="meta"><a href="https://arxiv.org/abs/0000.00000">arXiv</a><span class="sep">/</span><a href="https://github.com/YOURHANDLE/repo">code</a></p>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <!-- Newest first -->
+    <div class="pub">
+      <div class="t">A title that says what the paper does</div>
+      <div class="au"><b>Your Name</b>, A. Coauthor, B. Coauthor. NeurIPS 2025.</div>
+      <p class="meta"><a href="https://arxiv.org/abs/0000.00000">arXiv</a><span class="sep">/</span><a href="#">PDF</a><span class="sep">/</span><a href="https://github.com/YOURHANDLE/repo">code</a></p>
+    </div>
+    <div class="pub">
+      <div class="t">Another paper title</div>
+      <div class="au"><b>Your Name</b>, C. Coauthor. ICML 2024.</div>
+      <p class="meta"><a href="https://arxiv.org/abs/0000.00000">arXiv</a><span class="sep">/</span><a href="#">PDF</a></p>
+    </div>
+  </section>
+
+  <section id="code">
+    <h2>Code</h2>
+    <div class="repo">
+      <span class="n"><a href="https://github.com/YOURHANDLE/repo1">repo-name</a></span>
+      <span class="d"> — one line on what it does and who'd use it.</span>
+    </div>
+    <div class="repo">
+      <span class="n"><a href="https://github.com/YOURHANDLE/repo2">another-repo</a></span>
+      <span class="d"> — short description of the project.</span>
+    </div>
+    <!-- Optional snippet; delete this <pre> block if not needed -->
+    <pre><span class="c"># minimal usage</span>
+from yourpkg import RobustModel
+m = RobustModel(backbone="resnet50")
+m.fit(train, shift_reg=0.1)</pre>
+  </section>
+
+  <footer>&copy; 2026 Your Name</footer>
+</div>
+</body>
+</html>
