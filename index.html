@@ -3,10 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Name</title>
+<title>Alakesh Baishya</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- ##############################################################
+     STYLE BLOCK  -  colors, fonts, spacing.
+     You normally DON'T need to touch this. To change the accent
+     colour, edit --link below. To change fonts, edit --sans.
+     All your editable TEXT lives further down in the <body>.
+############################################################## -->
 <style>
   :root{
     --ink:#1a1a1a; --body:#2b2b2b; --muted:#6a6a6a; --line:#e6e6e6;
@@ -22,44 +29,34 @@
   a{color:var(--link);text-decoration:none}
   a:hover{color:var(--link-hover);text-decoration:underline}
   .wrap{max-width:720px;margin:0 auto;padding:64px 24px}
-
   header{display:flex;gap:24px;align-items:center;margin-bottom:24px}
   .photo{width:116px;height:116px;border-radius:6px;object-fit:cover;flex-shrink:0;
     border:1px solid var(--line);background:#f3f3f3}
   h1{font-size:28px;font-weight:600;color:var(--ink);letter-spacing:-.3px;margin:0 0 4px}
   .role{font-size:15.5px;color:var(--ink);margin:0 0 1px}
   .affil{font-size:14.5px;color:var(--muted);margin:0}
-
   .bio{font-size:16px;margin:0 0 16px}
-
-  /* links — simple inline row */
   .links{font-size:15px;margin:0 0 44px;color:var(--muted)}
   .links a{font-weight:500}
   .links .sep{margin:0 8px;color:#cfcfcf}
-
   h2{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
     color:var(--ink);margin:0 0 16px;padding-bottom:8px;border-bottom:1px solid var(--line)}
   section{margin-bottom:42px;scroll-margin-top:24px}
-
   .topic{margin-bottom:20px}
   .topic h3{font-size:17px;font-weight:600;color:var(--ink);margin:0 0 5px}
   .topic p{font-size:15.5px;margin:0 0 6px}
   .meta{font-size:14px}
   .meta a{font-weight:500}.meta .sep{margin:0 7px;color:#cfcfcf}
-
   .pub{margin-bottom:18px}
   .pub .t{font-size:16px;font-weight:600;color:var(--ink)}
   .pub .au{font-size:15px;color:var(--muted);margin:1px 0 4px}
   .pub .au b{color:var(--ink);font-weight:600}
-
   .repo{margin-bottom:12px}
   .repo .n{font-size:15.5px;font-weight:600}
   .repo .d{font-size:15px;color:var(--muted)}
-
   pre{background:#f7f7f7;border:1px solid var(--line);color:#222;font-family:var(--mono);
     font-size:13px;line-height:1.6;border-radius:6px;padding:16px 18px;overflow:auto;margin:16px 0 0}
   pre .c{color:#8a8a8a}
-
   footer{font-size:13px;color:var(--muted);margin-top:8px}
   @media(max-width:560px){header{flex-direction:column;text-align:center}.wrap{padding:44px 22px}}
 </style>
@@ -67,76 +64,123 @@
 <body>
 <div class="wrap">
 
-  <!-- PHOTO: save your headshot beside this file as "photo.jpg" -->
+<!-- ==============================================================
+     SECTION 1 - HEADER  (photo + name + title + affiliation)
+     EDIT: your name, role, and affiliation below.
+     PHOTO: upload your headshot to the repo as "photo.jpg".
+============================================================== -->
   <header>
-    <img class="photo" src="photo.jpg" alt="Alakesh BAishya">
+    <img class="photo" src="photo.jpg" alt="Alakesh Baishya">
     <div>
-      <h1>Your Name</h1>
-      <p class="role">PhD candidate, Machine Learning</p>
-      <p class="affil">University &middot; Research Lab</p>
+      <h1>Alakesh Baishya</h1>
+      <p class="role">PhD candidate, Quantum Information &amp; Computing</p>
+      <p class="affil">EDIT: University &middot; Group / Department</p>
     </div>
   </header>
 
-  <p class="bio">I am a PhD candidate working on Open and qunatum system and Quantum coimputing</p>
+<!-- ==============================================================
+     SECTION 2 - BIO  (one short paragraph about you)
+     EDIT: rewrite the sentence between the <p> tags.
+============================================================== -->
+  <p class="bio">I am a PhD candidate working on open quantum systems and quantum computing &mdash; studying how quantum systems behave when coupled to their environment, and how to harness them for computation.</p>
 
-  <!-- YOUR LINKS — edit each href below. Change only the text in quotes.
-       To remove one, delete that <a> and the <span class="sep"> before it. -->
+<!-- ==============================================================
+     SECTION 3 - LINKS  (each link is one line)
+     EDIT: change ONLY the text inside the quotes on each line.
+     - remove a link: delete its <a>...</a> AND the <span class="sep"> before it
+     - add a link: copy a whole <a>...</a><span class="sep">/</span> line
+============================================================== -->
   <p class="links">
-    <a href="mailto:you@email.edu">Email</a><span class="sep">/</span><!-- EMAIL -->
-    <a href="cv.pdf">CV</a><span class="sep">/</span><!-- CV (PDF) -->
-    <a href="https://scholar.google.com/citations?user=YOURID">Google Scholar</a><span class="sep">/</span><!-- SCHOLAR -->
-    <a href="https://github.com/YOURHANDLE">GitHub</a><span class="sep">/</span><!-- GITHUB -->
-    <a href="https://arxiv.org/a/YOURNAME">arXiv</a><!-- ARXIV -->
+    <a href="mailto:you@email.edu">Email</a><span class="sep">/</span>                              <!-- EMAIL: replace you@email.edu -->
+    <a href="cv.pdf">CV</a><span class="sep">/</span>                                              <!-- CV: upload cv.pdf, or paste a link -->
+    <a href="https://scholar.google.com/citations?user=YOURID">Google Scholar</a><span class="sep">/</span>  <!-- SCHOLAR: replace YOURID -->
+    <a href="https://github.com/YOURHANDLE">GitHub</a><span class="sep">/</span>                    <!-- GITHUB: replace YOURHANDLE -->
+    <a href="https://arxiv.org/a/YOURNAME">arXiv</a>                                               <!-- ARXIV: replace YOURNAME -->
   </p>
 
+<!-- ==============================================================
+     SECTION 4 - RESEARCH
+     One ".topic" block per theme. In each: write the title (<h3>),
+     a short what-it-is/why-it-matters paragraph (<p>), then the
+     paper / arXiv / code links in the ".meta" line.
+     Copy a whole ".topic" block to add another theme.
+============================================================== -->
   <section id="research">
     <h2>Research</h2>
-    <!-- One .topic per theme: what it is + why it matters, then links. -->
+
+    <!-- --- topic 1 --- -->
     <div class="topic">
-      <h3>Robustness under distribution shift</h3>
-      <p>When a model trained on one distribution meets another at test time, accuracy can collapse silently. I study why this happens and design training objectives that degrade gracefully instead — useful anywhere a model outlives the data it was trained on.</p>
-      <p class="meta"><a href="https://arxiv.org/abs/0000.00000">arXiv</a><span class="sep">/</span><a href="#">PDF</a><span class="sep">/</span>NeurIPS 2025</p>
+      <h3>Open quantum systems</h3>
+      <p>EDIT: describe this theme in 2-3 sentences - what it is, why it matters, and how your work uses it.</p>
+      <p class="meta"><a href="https://arxiv.org/abs/0000.00000">arXiv</a><span class="sep">/</span><a href="#">PDF</a></p>
     </div>
+
+    <!-- --- topic 2 --- -->
     <div class="topic">
-      <h3>Efficient inference for large models</h3>
-      <p>Big models are slow and expensive to serve. I study how far you can prune, quantize, or restructure them before quality breaks — and what that reveals about which parameters actually carry the work.</p>
+      <h3>Quantum computing</h3>
+      <p>EDIT: describe this theme in 2-3 sentences.</p>
       <p class="meta"><a href="https://arxiv.org/abs/0000.00000">arXiv</a><span class="sep">/</span><a href="https://github.com/YOURHANDLE/repo">code</a></p>
     </div>
   </section>
 
+<!-- ==============================================================
+     SECTION 5 - PUBLICATIONS
+     One ".pub" block per paper, newest first.
+     EDIT: title (<div class="t">), authors (your name in <b>...</b>),
+     venue + year, then the links in the ".meta" line.
+     Copy a ".pub" block to add a paper; delete one to remove it.
+============================================================== -->
   <section id="publications">
     <h2>Publications</h2>
-    <!-- Newest first -->
+
+    <!-- --- paper 1 --- -->
     <div class="pub">
-      <div class="t">A title that says what the paper does</div>
-      <div class="au"><b>Your Name</b>, A. Coauthor, B. Coauthor. NeurIPS 2025.</div>
-      <p class="meta"><a href="https://arxiv.org/abs/0000.00000">arXiv</a><span class="sep">/</span><a href="#">PDF</a><span class="sep">/</span><a href="https://github.com/YOURHANDLE/repo">code</a></p>
+      <div class="t">REPLACE - your paper title</div>
+      <div class="au"><b>Alakesh Baishya</b>, A. Coauthor, B. Coauthor. Venue Year.</div>
+      <p class="meta"><a href="https://arxiv.org/abs/0000.00000">arXiv</a><span class="sep">/</span><a href="#">PDF</a></p>
     </div>
+
+    <!-- --- paper 2 --- -->
     <div class="pub">
-      <div class="t">Another paper title</div>
-      <div class="au"><b>Your Name</b>, C. Coauthor. ICML 2024.</div>
+      <div class="t">REPLACE - another paper title</div>
+      <div class="au"><b>Alakesh Baishya</b>, C. Coauthor. Venue Year.</div>
       <p class="meta"><a href="https://arxiv.org/abs/0000.00000">arXiv</a><span class="sep">/</span><a href="#">PDF</a></p>
     </div>
   </section>
 
+<!-- ==============================================================
+     SECTION 6 - CODE
+     One ".repo" line per project: name (the link) + short description.
+     The <pre> block at the end is an OPTIONAL code snippet -
+     edit it or delete the whole <pre>...</pre> if you don't want it.
+============================================================== -->
   <section id="code">
     <h2>Code</h2>
+
+    <!-- --- repo 1 --- -->
     <div class="repo">
       <span class="n"><a href="https://github.com/YOURHANDLE/repo1">repo-name</a></span>
-      <span class="d"> — one line on what it does and who'd use it.</span>
+      <span class="d"> &mdash; EDIT: one line on what it does.</span>
     </div>
+
+    <!-- --- repo 2 --- -->
     <div class="repo">
       <span class="n"><a href="https://github.com/YOURHANDLE/repo2">another-repo</a></span>
-      <span class="d"> — short description of the project.</span>
+      <span class="d"> &mdash; EDIT: short description.</span>
     </div>
-    <!-- Optional snippet; delete this <pre> block if not needed -->
-    <pre><span class="c"># minimal usage</span>
-from yourpkg import RobustModel
-m = RobustModel(backbone="resnet50")
-m.fit(train, shift_reg=0.1)</pre>
+
+    <!-- --- optional code snippet (delete this whole <pre> block if not needed) --- -->
+    <pre><span class="c"># example: simulate a simple open quantum system</span>
+from qutip import basis, sigmaz, mesolve
+H = sigmaz()
+result = mesolve(H, basis(2, 0), tlist, c_ops, [sigmaz()])</pre>
   </section>
 
-  <footer>&copy; 2026 Your Name</footer>
+<!-- ==============================================================
+     SECTION 7 - FOOTER
+============================================================== -->
+  <footer>&copy; 2026 Alakesh Baishya</footer>
+
 </div>
 </body>
 </html>
